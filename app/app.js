@@ -4,7 +4,7 @@ var _ = require('underscore')
 var bodyParser = require('body-parser')
 var truckRoutes= require('./routes/truckRoutes');
 var app = express();
-var webport = process.env.PORT || 80;
+var webport = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
