@@ -1,13 +1,10 @@
-/**
- * Created by berniem on 5/25/15.
- */
-'use strict'
+'use strict';
 var express = require('express');
 var mongoose = require('mongoose');
 var Truck = require('../models/truckModel');
 
 var router = express.Router();
-var db = mongoose.connect('mongodb://localhost/foodTruckAPI')
+var db = mongoose.connect('mongodb://localhost/foodTruckAPI');
 
 router.route('/')
   .get(function (request, response) {
