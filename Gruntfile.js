@@ -1,10 +1,7 @@
-/**
- * Created by berniem on 5/25/15.
- */
 module.exports = function (grunt) {
+  'use strict';
   //load plugins
   [
-    'grunt-cafe-mocha',
     'grunt-contrib-jshint',
   ].forEach(function(task){
       grunt.loadNpmTasks(task);
@@ -12,15 +9,22 @@ module.exports = function (grunt) {
 
   // configure plugins
   grunt.initConfig({
-    cafemocha: {
-      all: { src: 'test/tests-*.js', options: {ui: 'tdd'},}
-    },
     jshint: {
-      app: ['app.js', 'public/js/**/*.js', 'lib/**/*.js'],
-      qa: ['Gruntfile.js', 'public/test/**/*.js', 'test/**/*.js'],
+      options: {
+        jshintrc: '.jshintrc',
+      },
+      app: ['app/app.js',
+        'app/public/js/collections/*.js',
+        'app/public/js/routers/*.js',
+        'app/public/js/templates/*.js',
+        'app/public/js/views/*.js',
+        'app/public/js/*.js',
+        'app/models/*.js',
+        'app/routes/*.js'],
+      qa: ['Gruntfile.js', 'test/**/*.js'],
     },
   });
 
   // register task
-  grunt.registerTask('default', ['cafemocha', 'jshint']);
+  grunt.registerTask('default', ['jshint']);
 };
