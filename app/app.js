@@ -1,7 +1,6 @@
 'use strict';
 var express = require('express');
-var _ = require('underscore')
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 var truckRoutes= require('./routes/truckRoutes');
 var app = express();
 var webPort = process.env.PORT || 3000;
