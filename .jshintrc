@@ -1,14 +1,14 @@
 {
-  "curly": true,
-  "eqeqeq": true,
-  "undef": true,
-  "indent": 2,
-  "latedef": true,
-  "jquery": true,
-  "node": true,
-  "browser": true,
-  "browserify": true,
-  "globalstrict": true,
-  "strict": true,
-  "-W117": true
+"curly": true,
+"eqeqeq": true,
+"undef": true,
+"indent": 2,
+"latedef": true,
+"jquery": true,
+"node": true,
+"browser": true,
+"browserify": true,
+"globalstrict": true,
+"strict": true,
+"-W117": true
 }
